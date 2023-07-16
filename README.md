@@ -1,5 +1,4 @@
-# jwt-passport-assignment-sima1358
-jwt-passport-assignment-sima1358 created by GitHub Classroom
+My fullstack project
 This is a very simple and small project which contains both Frontend and Backend;
 throug this project you can register yourself by input some info then
 they will save in MongoDB as the data base ;
