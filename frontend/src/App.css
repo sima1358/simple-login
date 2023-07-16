@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  background-color: rgb(160, 155, 229);
+  margin-top: 5rem;
+}
+
+.title{
+  border: 2px solid black;
+  width: 30%;
+  height: 3rem;
+  padding-top: 0.5rem;
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+
+.login-here,
+.registration {
+  color: #1c0a6d;
+}
+
+label {
+  margin-right: 0.5rem;
+}
+input {
+  margin: 0.5rem;
+}
