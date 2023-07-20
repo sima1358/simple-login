@@ -7,6 +7,13 @@ import cors from "cors";
 import initialize from "./routes/passport-config.js";
 import userRoutes from "./routes/userRoutes.js";
 
+import {dirname} from 'path';
+import { fileURLToPath } from "url";
+import path from 'path';
+const __filename = fileURLToPath(import.meta.url); // get the current file location of server.js
+const __dirname = dirname(__filename); //extract directory from that location
+
+
 dotenv.config();
 initialize(passport);
 const PORT = process.env.PORT || 4000;
@@ -32,5 +39,10 @@ mongoose
 
 // routes
 app.use("/", userRoutes);
+ 
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.get('*', (req, res) => {
+   res.sendFile(__dirname + "../frontend/build/index.html");
+});
 
 app.listen(PORT, () => console.log(`The webserver is running on port ${PORT}`));

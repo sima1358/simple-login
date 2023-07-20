@@ -14,7 +14,7 @@ export const Register = () => {
     event.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/register", {
+      const res = await axios.post("/register", {
         firstName,
         lastName,
         userName,

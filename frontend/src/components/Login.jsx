@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import '../App.css';
+import "../App.css";
 
 export const Login = () => {
   const [userName, setUserName] = useState("");
@@ -11,7 +11,7 @@ export const Login = () => {
     event.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:4000/login', {
+      const res = await axios.post("/login", {
         userName,
         password,
       });
@@ -41,17 +41,16 @@ export const Login = () => {
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
             />
-         
 
-          <div className="password-here">
-            <label>Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="password-here">
+              <label>Password</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
           </div>
- </div>
           <button type="submit">Submit</button>
         </form>
       </div>

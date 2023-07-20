@@ -9,7 +9,7 @@ useEffect(()=>{
 const userList = async()=>{
     
     try {
-        const res = await axios.get('http://localhost:4000/users');
+        const res = await axios.get('/users');
         setUsers(res.data);
     } catch (error) {
         console.log(error)
